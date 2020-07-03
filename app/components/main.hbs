@@ -1,9 +1,9 @@
 <main class="container w-full mx-auto p-3 ">
     <section class="h-full flex flex-col items-center justify-center pt-16">
-        <Main::Title />
+        <Main::Title @heading="Send anything you want to your email."/>
         <form method="POST" action="http://localhost:3000/api" class="w-full" enctype="multipart/form-data">
             <article class="shadow-xl p-12 flex-grow w-full  flex justify-around ">
-                    <Main::Upload {{drop-zone url='http://example.com/example' clickable=false addRemoveLinks=true}}/>
+                    <Main::Upload {{drop-zone url='http://example.com/example' addRemoveLinks=true}}/>
                     <Main::Text />
             </article>
             <Main::mail/>
