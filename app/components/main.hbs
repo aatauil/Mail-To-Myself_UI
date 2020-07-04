@@ -13,11 +13,23 @@
                     <textarea class="w-full h-full bg-gray-200 p-3" name="text" id="text" cols="30" rows="10" placeholder="paste your text in here"></textarea>
                 </div>
             </article>
+             <ul class="flex mt-6">
+                {{#each this.global.uploaded as |file|}}
+                    <li class="px-6 py-2 mr-2 font-bold shadow text-white bg-gray-700 rounded ">
+                    {{file.name}}
+                    </li>
+                {{/each}}
+            </ul>
+            
             <div class=" rounded pl-3 pr-6 py-3 mt-2 flex justify-center">
                 <input class="shadow py-3 pl-4 pr-24 mr-2" type="email" name="email" id="email" placeholder="Your e-mail address">
                 <input type="submit" value="Send!" class="shadow bg-green-500 rounded px-6 text-white font-bold">
             </div>
         </form>
+               
+
+                <button {{on 'click' this.show}}>show </button>
+                
     </section>
 </main>
 

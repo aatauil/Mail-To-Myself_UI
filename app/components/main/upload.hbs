@@ -1,4 +1,4 @@
 <div class="shadow-md w-5/12 flex flex-col justify-center items-center">
     <label for="file" ><b>Upload files here</b></label>
-    <input type="file" name="SendToMyself" id="file" class="p-12" multiple>
+    <input type="file" name="SendToMyself" id="file" class="p-12" {{on 'change' this.fileList}} multiple>
 </div>
